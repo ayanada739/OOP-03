@@ -1,5 +1,6 @@
 ﻿using OOP_03.Polymorphism__Overriding;
 using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OOP_03
 {
@@ -100,7 +101,44 @@ namespace OOP_03
             //refBase.MyFun02(); // // Override Using Override [Dynamic Binding] TypeB: A = 10 , B = 2
             #endregion
 
+            #region Not Binding
+            // Ref From Child Object From Parent
 
+            ////TypeB ChitdRef = new TypeA(); // Invalid
+            //TypeB ChitdRef  = (TypeB)new TypeA(1); // Not Binding
+            //// Explicit Casting
+            //// Unsafe Casting
+
+
+
+            //TypeA typeA = new TypeA(1);
+
+            //TypeB typeB = (TypeB)typeA; // Explicit Casting
+            //                            // (TypeB)==> Casting Operator — Function
+
+
+            //Console.WriteLine(typeB.A);
+            //Console.WriteLine(typeB.B);
+            //// System.InvalidCastException
+            ///
+
+
+            //TypeA typeA = new TypeB(1 , 2);
+            //TypeB typeB = (TypeB) typeA;
+
+
+            //Console.WriteLine(typeB.A); //1
+            //Console.WriteLine(typeB.B); //2
+
+
+            //object O = "2";
+            //int X = (int)O;
+
+            //Console.WriteLine(X);
+
+
+
+            #endregion
 
 
         }
