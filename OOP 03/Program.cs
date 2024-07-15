@@ -165,6 +165,7 @@ namespace OOP_03
 
             #endregion
 
+            #region Binding EX01
             //FullTimeEmployee fullTimeEmployee = new FullTimeEmployee(10, "Aya", 26, 6000);
             //ProcessEmployee(fullTimeEmployee);
             ////employee = new FullTimeEmployee();
@@ -190,7 +191,59 @@ namespace OOP_03
 
             //ProcessEmployee(parttimeEmployee); //Invalid
 
-            ////employee = new PartTimeEmployee();
+            ////employee = new PartTimeEmployee(); 
+            #endregion
+
+            #region Binding EX02
+
+           // //TypeA typeA = new TypeC(1, 2, 3);
+           // ////Binding
+
+           // //typeA.A = 10;
+           // //// typeA.B = 20;  //Invalid        
+           // //// typeA.C = 30;  //Invalid   
+
+           // //typeA.MyFun01(); //Override Using New Keyword [Static Binding]
+           // //                 //I am Base [Parent]
+           // //typeA.MyFun02(); //Override Using Override Keyword [Dynamic Binding]
+           // //                 //TypeC : A = 10 , B = 2 , C = 3
+
+           // //Console.WriteLine("==================");
+
+           // //TypeB typeB = new TypeC(1, 2, 3);
+           // ////TypeB Parent For TypeC
+           // //typeB.A = 10;
+           // //typeB.B = 20;
+           // ////typeB.C = 30; // Invalid
+           // //typeB.MyFun01();// Static bonded Method
+           // //                // I am Derived [Child]
+
+           // //typeB.MyFun02(); //Dynamic bonded Method
+           // //                 //TypeC : A = 10 , B = 20 , C = 30
+
+
+
+           // TypeA typeA = new TypeE(1, 2, 3, 4, 5); //Indirect Parent
+           // TypeB typeB = new TypeE(1, 2, 3, 4, 5); //Indirect Parent
+           // TypeC typeC = new TypeE(1, 2, 3, 4, 5); //Indirect Parent
+
+
+           // typeA.MyFun02(); // Dynamic Bonded Method
+           // typeB.MyFun02(); // Dynamic Bonded Method
+           // typeC.MyFun02(); // Dynamic Bonded Method
+           //// // TypeC: A = 1 B = 2 , C = 3
+
+           ////// Last Override Of MyFun02 ==> Was In Type C
+           ////// TypeD ==> new Virtual
+
+
+
+           //  TypeD typeD = new TypeE(1, 2, 3, 4 , 5); // Direct Parent
+           //  typeD.MyFun02(); //Dynamic binding 
+           //                   //Last Override MyFun02() IN CLASS TypeE
+
+           // //TypeE : A = 1 , B = 2 , C = 3 , D = 4 , E = 5
+            #endregion
         }
     }
 }

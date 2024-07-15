@@ -39,7 +39,7 @@ namespace OOP_03.Polymorphism__Overriding
         //Dynamic Binding Work During Run Time
         //Compiler will Bind Function Call Based On Object Type Not Reference Type
 
-        public new void MyFun02()
+        public override void MyFun02()
         {
             Console.WriteLine($"TypeB : A = {A} , B = {B}");
         }
