@@ -85,6 +85,23 @@ namespace OOP_03
             #endregion
 
 
+            #region Binding
+            //// Ref From Parent Object From Child
+            //TypeA refBase;
+            ///// Declare Fore Reference From Type "TypeA"
+            ///// refBaSe Refer To An Object From Type "TypeA"
+            ///// OR Refer To an object From Any Class [Inherit From TypeA]
+
+            //refBase = new TypeB(1, 2);
+            //// Binding
+            //refBase.A = 10;
+            ////refBase.B = 20; //Invalid
+            //refBase.MyFun01(); // Override Using New [Static Binding] I am Base [Parent]
+            //refBase.MyFun02(); // // Override Using Override [Dynamic Binding] TypeB: A = 10 , B = 2
+            #endregion
+
+
+
 
         }
     }

@@ -8,26 +8,26 @@ namespace OOP_03.Polymorphism__Overriding
 {
     internal class TypeA
     {
-        //public int A { get; set; }
-        //// Automatic Property
-        //// Compiler Will Generate Hidden Private Attr [Backing Field)
+        public int A { get; set; }
+        // Automatic Property
+        // Compiler Will Generate Hidden Private Attr [Backing Field)
 
-        //public TypeA(int a)
-        //{
-        //    A = a;
-        //}
+        public TypeA(int a)
+        {
+            A = a;
+        }
 
 
-        //// object Member Functions [Non Static Functions)
+        // object Member Functions [Non Static Functions)
 
-        //public void MyFun01()
-        //{
-        //    Console.WriteLine("I am Base [Parent]");
-        //}
+        public void MyFun01()
+        {
+            Console.WriteLine("I am Base [Parent]");
+        }
 
-        //public virtual void MyFun02()
-        //{
-        //    Console.WriteLine($"TypeA : A = {A}");
-        //}
+        public virtual void MyFun02()
+        {
+            Console.WriteLine($"TypeA : A = {A}");
+        }
     }
 }
