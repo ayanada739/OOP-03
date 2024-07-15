@@ -1,4 +1,5 @@
-﻿using OOP_03.Polymorphism__Overriding;
+﻿using OOP_03.Binding;
+using OOP_03.Polymorphism__Overriding;
 using System;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -38,6 +39,30 @@ namespace OOP_03
         }
 
         #endregion
+
+        //Employee employee
+        //Can refer ==> Object Emloyee
+        //Can refer ==> Object from Class Inheret from Emloyee [FullTimeEmployee_PartTimeEmployee]
+
+        public static void ProcessEmployee(Employee employee)
+        {
+            if (employee is not null)
+            {
+                employee.GetEmployeeType();
+                employee.GetEmployeeData();
+            }
+        }
+
+        ////Not Overloading
+        //public static void ProcessEmployee(PartTimeEmployee employee)
+        //{
+        //    if (employee is not null)
+        //    {
+        //        employee.GetEmployeeType();
+        //        employee.GetEmployeeData();
+        //    }
+        //}
+
 
 
         static void Main(string[] args)
@@ -140,7 +165,32 @@ namespace OOP_03
 
             #endregion
 
+            //FullTimeEmployee fullTimeEmployee = new FullTimeEmployee(10, "Aya", 26, 6000);
+            //ProcessEmployee(fullTimeEmployee);
+            ////employee = new FullTimeEmployee();
+            ////I am FullTimeEmployee
+            ////FullTimeEmployee : Id = 10 , Name = "Aya" , Age = 26 , Salary = 6000
 
+            //PartTimeEmployee parttimeEmployee = new PartTimeEmployee()
+            //{
+            //    Id = 20,
+            //    Name = "Aya",
+            //    Age = 26,
+            //    HourRate = 25
+
+            //};
+
+
+            /////parttimeEmployee.Id = 20;
+            /////parttimeEmployee.Name = "Mona";
+            /////parttimeEmployee.Age = 25;
+            /////parttimeEmployee.CountOfHours = 20;
+            /////parttimeEmployee.HourRate = 2;
+            /////
+
+            //ProcessEmployee(parttimeEmployee); //Invalid
+
+            ////employee = new PartTimeEmployee();
         }
     }
 }
